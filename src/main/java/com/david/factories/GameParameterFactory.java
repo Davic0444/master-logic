@@ -1,5 +1,6 @@
 package com.david.factories;
 
+import com.david.games.GuessANumberParam;
 import com.david.games.MasterLogicParam;
 import com.david.interfaces.GameParameter;
 import com.david.utils.GameType;
@@ -12,7 +13,7 @@ public class GameParameterFactory {
             case MASTER_LOGIC:
                 return new MasterLogicParam(parameters);
             case GUESS_A_NUMBER:
-                return null;
+                return new GuessANumberParam(parameters);
             default:
                 throw new AssertionError();
         }
